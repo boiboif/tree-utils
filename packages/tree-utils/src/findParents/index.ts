@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-shadow */
-export const findParents = <T extends { children: T[] }>(
+export const findParents = <T extends { children?: T[] }>(
   array: T[],
   code: any,
   key: string,

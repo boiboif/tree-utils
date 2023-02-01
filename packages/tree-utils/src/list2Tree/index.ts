@@ -1,4 +1,4 @@
-export const list2Tree = <T extends { parentId?: string | null; id: string; children?: T[] }>(
+export const list2Tree = <T>(
   list: T[],
   option: { key: keyof T; parentKey: keyof T },
 ): (T & { children: T })[] => {
