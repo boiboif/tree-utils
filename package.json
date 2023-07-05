@@ -1,8 +1,12 @@
 {
-  "name": "tree-utils-next",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@boiboif/tree-utils",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boiboif/tree-utils.git"
+  },
   "scripts": {
+    "prepare": "npx husky install",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf **/node_modules",
     "build": "cd packages/tree-utils && npm run build",
@@ -10,13 +14,16 @@
     "version": "changeset version",
     "publish": "changeset publish --registry=https://registry.npmjs.com/"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@umijs/fabric": "^4.0.1"
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
   },
   "devDependencies": {
-    "@changesets/cli": "^2.26.2"
+    "@changesets/cli": "^2.26.2",
+    "@umijs/fabric": "^4.0.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3"
   }
 }

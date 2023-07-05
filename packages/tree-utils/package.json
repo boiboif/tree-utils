@@ -1,7 +1,20 @@
 {
   "name": "@boiboif/tree-utils",
   "version": "1.0.0",
-  "description": "",
+  "description": "efficient tree-utils",
+  "keywords": [
+    "tree-utils",
+    "efficient"
+  ],
+  "authors": {
+    "name": "boiboif",
+    "email": "dg70946@163.com"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://github.com/boiboif/tree-utils",
+  "homepage": "https://github.com/boiboif/tree-utils",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "scripts": {
@@ -10,18 +23,11 @@
     "build:deps": "father prebundle",
     "prepublishOnly": "father doctor && npm run build"
   },
-  "keywords": [],
-  "authors": [
-    "bbf<dg70946@163.com>"
-  ],
   "license": "MIT",
   "files": [
     "dist",
     "compiled"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "devDependencies": {
     "father": "^4.2.3"
   }
