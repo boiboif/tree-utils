@@ -8,6 +8,8 @@
   "scripts": {
     "prepare": "npx husky install",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"packages/*/src/**/*.ts\"",
+    "lint": "eslint \"packages/*/src/**/*.ts\" --cache",
     "clean": "rimraf **/node_modules",
     "build": "cd packages/tree-utils && npm run build",
     "changeset": "changeset",
