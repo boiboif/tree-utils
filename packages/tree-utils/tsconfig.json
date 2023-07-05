@@ -1,4 +1,9 @@
 {
-  "extends": "../../tsconfig.json",
-  "include": ["src"]
+  "compilerOptions": {
+    "lib": ["ES2020"],
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "baseUrl": "./"
+  }
 }

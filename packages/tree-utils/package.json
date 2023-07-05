@@ -1,27 +1,28 @@
 {
   "name": "@boiboif/tree-utils",
-  "version": "0.3.1",
-  "exports": {
-    ".": {
-      "import": "./es/index.js",
-      "require": "./lib/index.js"
-    }
-  },
-  "main": "./lib/index.js",
-  "module": "./es/index.js",
-  "types": "./lib/index.d.ts",
-  "files": [
-    "es",
-    "lib",
-    "dist"
-  ],
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "scripts": {
-    "build": "tsc && vite build",
-    "dev": "vite"
+    "dev": "father dev",
+    "build": "father build",
+    "build:deps": "father prebundle",
+    "prepublishOnly": "father doctor && npm run build"
+  },
+  "keywords": [],
+  "authors": [
+    "bbf<dg70946@163.com>"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist",
+    "compiled"
+  ],
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
-    "typescript": "^4.9.4",
-    "vite": "^4.0.0",
-    "vite-plugin-dts": "^1.7.1"
+    "father": "^4.2.3"
   }
 }

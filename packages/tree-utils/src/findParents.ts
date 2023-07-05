@@ -2,7 +2,7 @@
 export const findParents = <T extends { children?: T[] }>(
   array: T[],
   code: any,
-  key: string,
+  key: keyof T,
 ): T[] => {
   const stack: T[] = [];
   let going = true;
